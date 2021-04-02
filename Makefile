@@ -10,7 +10,7 @@ download: download.sh
 
 unpack: chembl_28_chemreps.txt.gz chembl_28.fps.gz chembl_28.sdf.gz chembl_28_sqlite.tar.gz 
 	gzip -d *.gz
-	for name in *.tar; do tar xvf $${name}; done
+	for name in *.tar; do tar xvf $${name} && rm -f $${name}; done
 
 clean:
 	rm -rf ./ftp.ebi.ac.uk       ;\
