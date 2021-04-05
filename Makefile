@@ -1,9 +1,12 @@
 SHELL := bash
 
-.PHONY: download clean unpack
+.PHONY: download clean unpack prepare
 
-all: download unpack
+all: download unpack prepare
 	@echo "Prepared all data"
+
+prepare:
+	sqlite3 chembl_28/chembl_28_sqlite/chembl_28.db < get_bioactivities.sql
 
 download: download.sh
 	bash download.sh
@@ -19,4 +22,5 @@ clean:
 	rm -f chembl_28.{fps,sdf}    ;\
 	rm -f chembl_28_sqlite.tar   ;\
 	rm -r chembl_28_chemreps.txt ;\
+	rm -f bioactivity.csv        ;\
 	rm -f chembl_uniprot_mapping.txt

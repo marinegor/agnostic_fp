@@ -1,7 +1,9 @@
 *.swp
 .*.sh
+.ipynb_checkpoints
 
 chembl_28/*
 chembl_28*
 chembl_uniprot_mapping.txt
 checksums.txt
+bioactivity.csv
