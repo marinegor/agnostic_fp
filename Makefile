@@ -6,6 +6,7 @@ all: download unpack prepare
 	@echo "Prepared all data"
 
 prepare:
+	@echo "Warning: this takes around 40 minutes!"
 	sqlite3 chembl_28/chembl_28_sqlite/chembl_28.db < get_bioactivities.sql
 
 download: download.sh
