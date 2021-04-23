@@ -16,6 +16,10 @@ Namely, it runs `get_bioactivities.sql` SQL script -- feel free to modify it if 
 
 Warning: the script runs in about 40 minutes.
 
+## What's next?
+I suggest you run through the example notebook `tSNE_by_organism.ipynb` to see the example of how the decomposition works in code.
+Don't worry that the final tSNE doesn't look clear and separated -- it's not mean to, since the agnostic fingerprints probably won't be a good predictor for protein's organism of origin.
+
 ## Useful links
 
 	- Chembl's FTP server: https://chembl.gitbook.io/chembl-interface-documentation/downloads
